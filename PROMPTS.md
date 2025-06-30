@@ -14,7 +14,7 @@
 - The CSV files are named either `engine0.csv` or `engine1.csv`.
 - The CSV files contains rows with either 3 values or with 8 values.
 - The CSV data looks like:
-
+```
 name,value,min,max,mean,sample_size,sum,std_dev
 ID: 0/started_at,Mon May  5 16:09:16 2025
 ID: 0/servicing_at,Mon May  5 16:10:31 2025
@@ -27,6 +27,7 @@ ID: 0/sched/cycle_size/xs_19,1,1,3,1.000001,14292498996,14292507705,0.000781
 ID: 0/sched/cycle_size/xs_20,1,1,2,1.000000,14526007448,14526007462,0.000031
 ID: 0/sched/cycle_size/xs_21,1,1,2,1.000005,3658808,3658827,0.002279
 ID: 0/sched/cycle_size/xs_22,1,1,2,1.000006,3649980,3650002,0.002455
+```
 
 - The `name` field is the name of the counter and is composed of multiple components separated by '/'. The second part of the name defines which component the counters are for. `net` is for network data, `mem` is for persistent memory, `sched` is for the I/O scheduler, `io` is for the internal I/O backend, `nvme` is for the storage device, `dmabuff` is for the kernel's memory, pool is data specific for a single storage pool.
 - The metric name may contain `tgt` which is the specific storage target for the data.
